@@ -1,5 +1,5 @@
 # OpenAI Whisper API with Flask and Docker
-
+![alt text](https://raw.githubusercontent.com/dzhusipov/whisper-docker-api/master/img/app.png)
 ## Overview
 This project sets up an OpenAI Whisper API using Flask and Docker, allowing for efficient audio file transcription.
 
