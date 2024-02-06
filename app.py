@@ -8,7 +8,7 @@ torch.cuda.is_available()
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Load the Whisper model:
-model = whisper.load_model("base", device=DEVICE)
+model = whisper.load_model("medium", device=DEVICE)
 
 app = Flask(__name__)
 
@@ -37,7 +37,7 @@ def handler():
         handle.save(temp)
         # Let's get the transcript of the temporary file.
         language = 'ru'
-        result = model.transcribe(temp.name, fp16=False, language=language)
+        result = model.transcribe(temp.name, fp16=False)
         # Now we can store the result object for this file.
         results.append({
             'filename': filename,
